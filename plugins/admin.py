@@ -4,7 +4,7 @@ import os
 from pyrogram import Client, filters
 from helper.date import add_date
 from helper.database import uploadlimit, usertype, addpre
-ADMIN = int(os.environ.get("ADMIN", 1484670284))
+ADMIN = int(os.environ.get("ADMIN", 5165943027))
 log_channel = int(os.environ.get("LOG_CHANNEL", ""))
 
 
@@ -78,7 +78,7 @@ async def vip3(bot,update):
 	id = update.message.reply_to_message.text.split("/addpremium")
 	user_id = id[1].replace(" ", "")
 	inlimit = 107374182400
-	uploadlimit(int(user_id), 107374182400)
+	uploadlimit(int(user_id), 5165943027)
 	usertype(int(user_id),"💎 **DIAMOND**")
 	addpre(int(user_id))
 	await update.message.edit("Added successfully To Premium Upload limit 100 GB")
